@@ -1,13 +1,12 @@
-import * as fs from "fs";
-import path from "path";
 import React from "react";
+import css from "../../index.css";
 
 export default function MainLayout({ children }: any) {
-  const manifest = fs.readFileSync(
-    path.resolve(__dirname, "manifest.json"),
-    "utf8"
-  );
-  const css = JSON.parse(manifest)["main.css"];
+  // const manifest = fs.readFileSync(
+  //   path.resolve(__dirname, "manifest.json"),
+  //   "utf8"
+  // );
+  // const css = JSON.parse(manifest)["main.css"];
 
   return (
     <html lang="en">

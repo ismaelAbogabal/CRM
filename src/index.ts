@@ -4,7 +4,7 @@ import Home from "./views/home";
 import path from "path";
 import ReactDOm from "react-dom/server";
 
-console.log(ReactDOm.renderToString(Home()));
+// console.log(ReactDOm.renderToString(Home()));
 
 const app = express();
 
@@ -14,7 +14,7 @@ app.get("/", (req, res) => {
   res.end(ReactDOm.renderToString(Home()));
 });
 
-const PORT = process.env.PORT || 3000;
+const PORT = +(process.env.PORT ?? "0") || 3000;
 app.listen(PORT, () => {
   console.log(`Server is running on http://localhost:${PORT}`);
 });
